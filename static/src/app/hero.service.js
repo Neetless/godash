@@ -9,19 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_heroes_1 = require('./mock-heroes');
 var HeroService = (function () {
     function HeroService() {
     }
-    HeroService.prototype.getHeroes = function () {
-        return Promise.resolve(mock_heroes_1.HEROES);
-    };
-    HeroService.prototype.getHeroesSlowly = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            setTimeout(function () { return resolve(_this.getHeroes()); }, 10000);
-        });
-    };
+    HeroService.prototype.getHeroes = function () { };
     HeroService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
